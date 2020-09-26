@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-
 <title>Not Fine tuned BERTsent clusters</title>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
 <style type="text/css">
     /*!
 *
@@ -9129,17 +9124,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
-
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
-
 Browsers not listed, including Safari, are supported via the styling under the
 `Old browsers` comments below.
 */
@@ -10711,10 +10704,8 @@ div.input_area > div.highlight > pre {
   }
 }
 /*
-
 Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 Adapted from GitHub theme
-
 */
 .highlight-base {
   color: #000;
@@ -12519,7 +12510,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13017,15 +13008,12 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-
-
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 body {
   overflow: visible;
   padding: 8px;
 }
-
 div#notebook {
   overflow: visible;
   border-top: none;
@@ -13033,21 +13021,19 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
-
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
-
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
@@ -13073,14 +13059,12 @@ div#notebook {
 <body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
-
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># from scipy.cluster import  hierarchy</span>
-
 <span class="c1"># #Vectorizing</span>
 <span class="c1"># X = CountVectorizer().fit_transform(docs)</span>
 <span class="c1"># X = TfidfTransformer().fit_transform(X)</span>
@@ -13090,11 +13074,9 @@ div#notebook {
 <span class="c1"># Z = hierarchy.linkage(X,&quot;average&quot;, metric=&quot;cosine&quot;)</span>
 <span class="c1"># C = hierarchy.fcluster(Z, threshold, criterion=&quot;distance&quot;)</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13104,29 +13086,20 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Num GPUs Available: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">experimental</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s1">&#39;GPU&#39;</span><span class="p">)))</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Num GPUs Available:  0
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13143,11 +13116,9 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">import</span> <span class="nn">pickle</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13156,33 +13127,21 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bert_config</span> <span class="o">=</span> <span class="n">read_json</span><span class="p">(</span><span class="n">configs</span><span class="o">.</span><span class="n">embedder</span><span class="o">.</span><span class="n">bert_embedder</span><span class="p">)</span>
 <span class="n">bert_config</span><span class="p">[</span><span class="s1">&#39;metadata&#39;</span><span class="p">][</span><span class="s1">&#39;variables&#39;</span><span class="p">][</span><span class="s1">&#39;BERT_PATH&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;embeddings/sentence_ru_cased_L-12_H-768_A-12_pt&#39;</span>
-
 <span class="n">m</span> <span class="o">=</span> <span class="n">build_model</span><span class="p">(</span><span class="n">bert_config</span><span class="p">)</span>
-
 <span class="n">dramas</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;drama/&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">isfile</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;drama/&#39;</span><span class="p">,</span> <span class="n">f</span><span class="p">))]</span>
 <span class="n">dramas_texts</span> <span class="o">=</span> <span class="p">[]</span>
-
-
 <span class="k">for</span> <span class="n">drama</span> <span class="ow">in</span> <span class="n">dramas</span><span class="p">:</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;drama/&#39;</span><span class="p">,</span> <span class="n">drama</span><span class="p">),</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">dramas_texts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
-
 <span class="n">dramas_texts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[nltk_data] Downloading package punkt to /Users/vlasovvp/nltk_data...
 [nltk_data]   Package punkt is already up-to-date!
@@ -13198,14 +13157,8 @@ div#notebook {
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
     <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-
 <div class="output_text output_subarea output_execute_result">
 <pre>[(&#39;Григорий&#39;, &#39;Ступай отвори дверь! звонят!&#39;),
  (&#39;Петр&#39;,
@@ -13215,12 +13168,9 @@ div#notebook {
  (&#39;Чужой слуга&#39;,
   &#39;Ах ты, чухонский сын! Побегал бы ты с мое. Вот к цветочнице велела снесть, что на Петербургской. Небось четвертака на извозчика не\n            даст. Да и к вашему тож. Что, спит?&#39;)]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13228,32 +13178,18 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">only_sents</span> <span class="o">=</span> <span class="p">[]</span>
-
 <span class="k">for</span> <span class="n">drama</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">dramas_texts</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">drama</span><span class="p">:</span>
         <span class="n">only_sents</span> <span class="o">=</span> <span class="n">only_sents</span> <span class="o">+</span> <span class="p">[</span><span class="n">sent</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">part</span><span class="p">]</span>
-        
 <span class="n">only_sents</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
-
-
-
- 
- 
 <div id="cdf7446c-6c0a-48a6-b1cf-05e139f15b9c"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
@@ -13263,27 +13199,16 @@ var element = $('#cdf7446c-6c0a-48a6-b1cf-05e139f15b9c');
 {"model_id": "e8bdb642d13d4ff9ac2fe6295b11b868", "version_major": 2, "version_minor": 0}
 </script>
 </div>
-
 </div>
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
     <div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
 <div class="output_text output_subarea output_execute_result">
 <pre>[&#39;Ступай отвори дверь! звонят!&#39;,
  &#39;Да ты что сидишь? На ногах у тебя пузыри, что ли? встать не можешь?&#39;,
@@ -13291,12 +13216,9 @@ var element = $('#cdf7446c-6c0a-48a6-b1cf-05e139f15b9c');
  &#39;А, московская ворона! Откуда тебя принесло?&#39;,
  &#39;Ах ты, чухонский сын! Побегал бы ты с мое. Вот к цветочнице велела снесть, что на Петербургской. Небось четвертака на извозчика не\n            даст. Да и к вашему тож. Что, спит?&#39;]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13304,31 +13226,17 @@ var element = $('#cdf7446c-6c0a-48a6-b1cf-05e139f15b9c');
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">only_sents_splited</span> <span class="o">=</span> <span class="p">[]</span>
-
 <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">only_sents</span><span class="p">):</span>
     <span class="n">only_sents_splited</span> <span class="o">=</span> <span class="n">only_sents_splited</span> <span class="o">+</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;[</span><span class="se">\n</span><span class="s1">]&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">))</span>
-    
 <span class="n">only_sents_splited</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
-
-
-
- 
- 
 <div id="10e88b06-12cf-432e-a6e4-a802c5804305"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
@@ -13338,43 +13246,31 @@ var element = $('#10e88b06-12cf-432e-a6e4-a802c5804305');
 {"model_id": "c7715a0b5cbe49d090e3eb9fb5abf9b2", "version_major": 2, "version_minor": 0}
 </script>
 </div>
-
 </div>
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-6-7937849db5b6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-intense-fg ansi-bold">      2</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">for</span> text <span class="ansi-green-fg">in</span> tqdm<span class="ansi-blue-fg">(</span>only_sents<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">     </span>only_sents_splited <span class="ansi-blue-fg">=</span> only_sents_splited <span class="ansi-blue-fg">+</span> nltk<span class="ansi-blue-fg">.</span>sent_tokenize<span class="ansi-blue-fg">(</span>re<span class="ansi-blue-fg">.</span>sub<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;[\n]&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39; &#39;</span><span class="ansi-blue-fg">,</span> text<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span>
 <span class="ansi-green-intense-fg ansi-bold">      6</span> only_sents_splited<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">]</span>
-
 <span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13387,25 +13283,13 @@ var element = $('#10e88b06-12cf-432e-a6e4-a802c5804305');
             <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sent</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
-
-
-
- 
- 
 <div id="736a6774-7c0e-49c5-84e3-8dc84e5e53bf"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
@@ -13415,23 +13299,16 @@ var element = $('#736a6774-7c0e-49c5-84e3-8dc84e5e53bf');
 {"model_id": "4a523ef0d23b4260a3f7e3c190d07821", "version_major": 2, "version_minor": 0}
 </script>
 </div>
-
 </div>
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13440,38 +13317,26 @@ var element = $('#736a6774-7c0e-49c5-84e3-8dc84e5e53bf');
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>head <span class="s1">&#39;train_data.txt&#39;</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Ступай отвори дверь!
 звонят!
-
 Да ты что сидишь?
 На ногах у тебя пузыри, что ли?
 встать не можешь?
-
 Ну, уж я пойду, так и быть, отворю!
 Это Андрюшка!
-
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13480,35 +13345,20 @@ var element = $('#736a6774-7c0e-49c5-84e3-8dc84e5e53bf');
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">only_sents_vectors_pooler</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">sents_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">only_sents_splited</span><span class="p">)</span>
-
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">sents_count</span> <span class="o">/</span> <span class="mi">5</span><span class="p">))):</span>
     <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">only_sents_vectors_mean_tmp</span><span class="p">,</span> <span class="n">bert_pooler_outputs_tmp</span> <span class="o">=</span> <span class="n">m</span><span class="p">([</span><span class="n">only_sents_splited</span><span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">5</span><span class="p">:</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="p">]])</span>
     <span class="n">only_sents_vectors_pooler</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">bert_pooler_outputs_tmp</span><span class="p">)</span>
-    
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;ru_bert_fullsplited_vectors.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">only_sents_splited</span><span class="p">,</span> <span class="n">only_sents_vectors_pooler</span><span class="p">),</span> <span class="n">f</span><span class="p">)</span>
-    
 <span class="n">only_sents_vectors_pooler</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
-
-
-
- 
- 
 <div id="b9600233-49d0-4bed-b0e4-e45cb196441f"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
@@ -13518,27 +13368,16 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 {"model_id": "e2c187b4bbca40ab852fbc90b48570e9", "version_major": 2, "version_minor": 0}
 </script>
 </div>
-
 </div>
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 </pre>
 </div>
 </div>
-
 <div class="output_area">
-
     <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-
 <div class="output_text output_subarea output_execute_result">
 <pre>[array([-0.24651313, -0.11289657,  0.27159512, -0.3328776 , -0.26364964,
          0.08904048,  0.1921851 ,  0.20846134,  0.29406524,  0.06907827,
@@ -13695,12 +13534,9 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
          0.1195893 ,  0.9382054 ,  0.48530763, -0.09567229, -0.18962196,
         -0.28454083,  0.5202504 ,  0.0114485 ], dtype=float32)]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13710,20 +13546,13 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;ru_bert_fullsplited_vectors.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">sents_vectors</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
@@ -13731,14 +13560,11 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 <span class="ansi-green-fg">&lt;ipython-input-1-be38df5dacd3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;ru_bert_fullsplited_vectors.pkl&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;rb&#39;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg">     </span>sents_vectors <span class="ansi-blue-fg">=</span> pickle<span class="ansi-blue-fg">.</span>load<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">)</span>
-
 <span class="ansi-red-fg">NameError</span>: name &#39;pickle&#39; is not defined</pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13748,22 +13574,13 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sents_vectors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">only_sents_splited</span><span class="p">,</span> <span class="n">only_sents_vectors_mean</span><span class="p">))</span>
 <span class="n">sents_vectors</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt output_prompt">Out[49]:</div>
-
-
-
-
 <div class="output_text output_subarea output_execute_result">
 <pre>[(&#39;Ступай отвори дверь!&#39;,
   array([ 3.39768492e-02, -2.38059551e-01,  1.60009131e-01, -6.02096468e-02,
@@ -13960,12 +13777,9 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
           4.08830136e-01,  2.31340423e-01, -3.38004082e-02, -2.39644557e-01],
         dtype=float32))]</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13977,31 +13791,19 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 <span class="n">clusters</span> <span class="o">=</span> <span class="n">clust_model_kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">only_sents_vectors_mean</span><span class="p">)</span>
 <span class="n">clusters</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt output_prompt">Out[74]:</div>
-
-
-
-
 <div class="output_text output_subarea output_execute_result">
 <pre>array([16, 16,  2,  5,  5], dtype=int32)</pre>
 </div>
-
-</div>
-
 </div>
 </div>
-
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14010,11 +13812,9 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sents_with_clusters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">sent</span> <span class="k">for</span> <span class="n">sent</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">sents_vectors</span><span class="p">],</span> <span class="n">clusters</span><span class="p">))</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14028,20 +13828,13 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
         <span class="nb">print</span><span class="p">(</span><span class="n">sent</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;=========================</span><span class="se">\n</span><span class="s1">=========================</span><span class="se">\n</span><span class="s1">=========================</span><span class="se">\n\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0
 А, московская ворона!
@@ -14057,9 +13850,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 1
 медведь?
 Тс!
@@ -14074,9 +13864,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 2
 Да ты что сидишь?
 Ну, уж я пойду, так и быть, отворю!
@@ -14091,9 +13878,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 3
 Что ж за барин, коли уж             пенсиона слуге не выдаст за службу?
 Что ж мне лгать?
@@ -14108,9 +13892,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 4
 Вот к цветочнице велела снесть, что на Петербургской.
 а барин-то зачем?
@@ -14125,9 +13906,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 5
 На ногах у тебя пузыри, что ли?
 встать не можешь?
@@ -14142,9 +13920,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 6
 По целковому жертвуют и больше.
 Княжой повар дал пять             рублей и сам берется стол готовить.
@@ -14159,9 +13934,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 7
 Ведь жалованье-то уж он мне выдаст,             хоть я работай или не работай.
 Они сказали только, что доложи-де, говорит, Федору             Федоровичу, что я, говорит, к ним сама-де буду у них-с...
@@ -14176,9 +13948,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 8
 Что ж из того, что лежишь весь день?
 Да на что ж мне твоя копейка?
@@ -14193,9 +13962,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 9
 Да, он человек вот какой!
 Вот мое!
@@ -14210,9 +13976,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 10
 А копить мне на старость зачем?
 А ты будешь?
@@ -14227,9 +13990,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 11
 Врешь, а вот же и не штопал никогда.
 Что?
@@ -14244,9 +14004,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 12
 Слышите?..
 Вот мы все здесь собрались; но кто же из нас,             здесь присутствующих женихов, кто получит руку Лизаветы Платоновны?
@@ -14261,9 +14018,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 13
 И очень хорошо сделали, я и жена будем очень рады.
 Я пожертвовал             вместе с женою пять рублей.
@@ -14278,9 +14032,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 14
 Правда ли, что барыня ваша дает вам чулки штопать?
 А вы             что, ведь вот ничего ж не делаете.
@@ -14295,9 +14046,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 15
 только, чай, слава, что бал.
 Нет, брат, бал будет на всю руку.
@@ -14312,9 +14060,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 16
 Ступай отвори дверь!
 звонят!
@@ -14329,9 +14074,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 17
 Пожалуй… пожалуй… сочиним!
 Разогреты!
@@ -14346,9 +14088,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 18
 Ну, вот хоть бы и ты, Петр Иванович!
 Я не взял с собою часов, ибо  счастливые часов не             наблюдают!
@@ -14363,9 +14102,6 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 19
 Да ведь у вас известно: дворовый человек до обеда повар, а после обеда уж он кучер, или             лакей, или башмаки шьет.
 — «Нет, мол, скажет, это не мое дело; извольте-с приказать             Ивану».
@@ -14380,16 +14116,11 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 =========================
 =========================
 =========================
-
-
-
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14405,23 +14136,15 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
             <span class="n">sents</span><span class="p">[</span><span class="n">sent</span><span class="p">]</span> <span class="o">=</span> <span class="n">cluster</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">person</span><span class="p">,</span> <span class="n">sents</span><span class="p">))</span>
 <span class="c1">#     return text</span>
-
 <span class="n">cluster_text</span><span class="p">(</span><span class="n">dramas_texts</span><span class="p">[</span><span class="mi">54</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">m</span><span class="p">,</span> <span class="n">clust_model_kmeans</span><span class="p">)</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 <div class="output_wrapper">
 <div class="output">
-
-
 <div class="output_area">
-
     <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Любим: {&#39;Княгиня... дядюшка, угодно ли вам кушать?&#39;: 3, &#39;Я завтрака хотел добиться своего, И что же?&#39;: 3, &#39;Не нашел в столовой никого.&#39;: 14, &#39;Ваш дом вдруг сделался ужасною пустыней.&#39;: 14}
 Княгиня: {&#39;Но мы условились...&#39;: 1}
@@ -14443,10 +14166,8 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
 </pre>
 </div>
 </div>
-
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14455,11 +14176,9 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">only_sents_vectors_mean</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14468,30 +14187,22 @@ var element = $('#b9600233-49d0-4bed-b0e4-e45cb196441f');
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">)</span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
-
     </div>
 </div>
 </div>
-
 </div>
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
